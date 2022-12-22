@@ -1,0 +1,176 @@
+/*Schedule*/
+.schedule{
+  position: relative;
+  margin: 8% 0 0 0;
+  &__wrapper{
+    max-width: 900px;
+    margin: 0 auto;
+    .schedule__bg-line{
+      background: url("../img/icons/line-1.png") repeat-y;
+      width: 1px;
+      height: 84%;
+      position: absolute;
+      top: 10%;
+      left: 51%;
+      @media (max-width: 500px){
+        height: 100%;
+        top: 0;
+        left: 90%;
+      }
+      .schedule__bg-circle{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #a5893d;
+        position: absolute;
+        top: -3px;
+        left: -7px;
+        &:nth-child(2){
+          top: 19%;
+          @media (max-width: 500px){
+            top: 17%;
+          }
+        }
+        &:nth-child(3){
+          top: 39%;
+          @media (max-width: 500px){
+            top: 34%;
+          }
+        }
+        &:nth-child(4){
+          top: 58%;
+          @media (max-width: 500px){
+            top: 50%;
+          }
+        }
+        &:nth-child(5){
+          top: 79%;
+          @media (max-width: 500px){
+            top: 66%;
+          }
+        }
+        &:nth-child(6){
+          top: 99%;
+          @media (max-width: 500px){
+            top: 83%;
+          }
+        }
+        &:nth-child(7){
+          visibility: hidden;
+          @media (max-width: 500px){
+            visibility: initial;
+            top: 100%;
+          }
+        }
+      }
+    }
+    .schedule__bg-flower{
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 90vw;
+      width: 10vw;
+      opacity: 0;
+      img{
+        width: 100%;
+      }
+      &.active{
+        visibility: visible;
+        animation-name: animFlowerDrop;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        @keyframes animFlowerDrop{
+          100%{
+            top: 50vh;
+            left: 73vw;
+            transform: rotateZ(-300deg);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .schedule__bg-petal{
+      visibility: hidden;
+      position: absolute;
+      top: 100vh;
+      left: 0;
+      width: 8vw;
+      opacity: 0;
+      img{
+        width: 100%;
+      }
+      &.active{
+        visibility: visible;
+        animation-name: animPetalDrop;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        @keyframes animPetalDrop{
+          100%{
+            top: 160vh;
+            left: 22vw;
+            transform: rotateZ(360deg);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .schedule__items{
+      display: flex;
+      flex-direction: column;
+      padding: 0 2% 0 2%;
+      font-family: 'Open Sans Condensed', sans-serif;
+      &_preparation{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 500px){
+          flex-direction: column;
+          justify-content: center;
+          margin: 0 0 5% 0;
+        }
+        .preparation_img{
+          max-width: 30%;
+          @media (max-width: 500px){
+            max-width: 63%;
+            margin: 0 0 5% 0;
+          }
+          img{
+            max-width: 100%;
+          }
+        }
+        .vows_order{
+          @media (max-width: 500px){
+            order: 2;
+          }
+        }
+        .preparation_vows{
+          max-width: 40%;
+          @media (max-width: 500px){
+            max-width: 73%;
+            text-align: center;
+          }
+          &:first-child{
+            text-align: end;
+            @media (max-width: 500px){
+              text-align: center;
+            }
+          }
+          h2{
+            font-family: 'Corinthia', cursive;
+            font-size: 22px;
+            letter-spacing: 3px;
+            color: #a5893d;
+            margin: 0 0 2% 0;
+          }
+          h1{
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 0 0 2% 0;
+          }
+        }
+      }
+    }
+  }
+}
+/*Schedule*/

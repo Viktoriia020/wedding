@@ -1,0 +1,100 @@
+/*Gallery*/
+.gallery{
+  background: #f8f6f3;
+  margin: 8% 0 0 -3%;
+  padding: 0 0 0 2%;
+  position: relative;
+  &__bg{
+    visibility: hidden;
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    z-index: 999;
+    width: 8vw;
+    opacity: 0;
+    img{
+      width: 100%;
+    }
+    &.active{
+      visibility: visible;
+      animation-name: animPetalDropBottom;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      @media (max-width: 500px){
+        display: none;
+      }
+      @keyframes animPetalDropBottom{
+        100%{
+          bottom: 6%;
+          right: 7%;
+          transform: rotateZ(360deg);
+          opacity: 1;
+        }
+      }
+    }
+    &.activeMobile{
+      visibility: visible;
+      animation-name: animPetalDropBottomMobile;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      @media (max-width: 500px){
+        display: block;
+      }
+      @keyframes animPetalDropBottomMobile{
+        100%{
+          bottom: 6%;
+          right: 7%;
+          transform: rotateZ(360deg);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    .gallery__content{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 8% 0 0 0;
+      &_img{
+        width: 48px;
+        margin: 0 0 2% 0;
+        img{
+          width: 100%;
+        }
+      }
+      h1{
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: bold;
+        letter-spacing: 7px;
+        font-size: 25px;
+        margin: 0 4% 4% 3%;
+        text-align: center;
+      }
+      .gallery__content_photos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 0 8% 0;
+        .gallery__content_photos_item{
+          max-width: 280px;
+          margin: 5px;
+          display: inline-block;
+          overflow: hidden;
+          img{
+            width: 100%;
+            transition: 0.5s;
+            display: block;
+            &:hover{
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*Gallery*/

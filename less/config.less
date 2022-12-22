@@ -1,0 +1,68 @@
+@import "_header";
+@import "_schedule";
+@import "_countdown";
+@import "_gallery";
+@import "_footer";
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Corinthia:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+/*Fonts*/
+/*Обнуление*/
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+ul,
+ol,
+li{
+  list-style: none;
+}
+img{
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-weight: inherit;
+  font-size: inherit;
+}
+html{
+  overflow-x: hidden !important;
+}
+body{
+  overflow-anchor: none;
+  font-family: 'Catamaran', sans-serif;
+  overflow-x: hidden !important;
+}
+/*Обнуление*/
+/*Preloader*/
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 1001;
+}
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+.loaded .preloader {
+  display: none;
+}
+/*Preloader*/
+
